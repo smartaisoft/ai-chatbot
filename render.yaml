@@ -5,7 +5,7 @@ services:
       env: node
       region: oregon # Change as needed
       plan: free # Or 'starter', 'standard', etc.
-      buildCommand: npm install && npm run build
+      buildCommand: sudo npm install --legacy-peer-deps && sudo npm run build
       startCommand: npm start
       autoDeploy: true
       envVars:
@@ -17,12 +17,3 @@ services:
             property: postgresql://aichat:gjS78wKYB30wv5oktrif5xNYmMNi8GPS@dpg-ct1mgam8ii6s73fhctrg-a.oregon-postgres.render.com/aichat_mair?sslmode=require
         - key: NEXT_PUBLIC_API_URL
           value: https://ai-chatbot-dusd.onrender.com
-        - key: SSL
-          value: true
-  
-  databases:
-    - name: nextjs-db
-      plan: free # Use 'starter' or higher for production
-      region: oregon # Match the region of the web service
-      postgresVersion: 15 # Specify the desired PostgreSQL version
-      diskSize: 1GB  
