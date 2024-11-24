@@ -5,7 +5,7 @@ services:
       env: node
       region: oregon # Change as needed
       plan: free # Or 'starter', 'standard', etc.
-      buildCommand: sudo npm install --legacy-peer-deps && sudo npm run build
+      buildCommand: npm install --legacy-peer-deps && npm run build
       startCommand: npm start
       autoDeploy: true
       envVars:
