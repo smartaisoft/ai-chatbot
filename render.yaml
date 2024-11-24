@@ -14,9 +14,9 @@ services:
         - key: DATABASE_URL
           fromDatabase:
             name: nextjs-db
-            property: connectionString
+            property: postgresql://aichat:gjS78wKYB30wv5oktrif5xNYmMNi8GPS@dpg-ct1mgam8ii6s73fhctrg-a.oregon-postgres.render.com/aichat_mair?sslmode=require
         - key: NEXT_PUBLIC_API_URL
-          value: https://smartaisoft.onrender.com
+          value: https://ai-chatbot-dusd.onrender.com
         - key: SSL
           value: true
   
