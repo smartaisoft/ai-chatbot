@@ -32,8 +32,7 @@ export const authConfig = {
       }
 
       if (isLoggedIn) {
-        // return Response.redirect(new URL('/', nextUrl as unknown as URL));
-        return Response.redirect(new URL("https://ai-chatbot-dusd.onrender.com"));
+        return Response.redirect(new URL('/', nextUrl as unknown as URL));
       }
 
       return true;
