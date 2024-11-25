@@ -10,7 +10,7 @@ export const SignOutForm = () => {
         'use server';
 
         await signOut({
-          redirectTo: '/',
+          redirectTo: 'https://ai-chatbot-dusd.onrender.com',
         });
       }}
     >

@@ -17,7 +17,9 @@ export const authConfig = {
       const isOnLogin = nextUrl.pathname.startsWith('/login');
 
       if (isLoggedIn && (isOnLogin || isOnRegister)) {
-        return Response.redirect(new URL('/', nextUrl as unknown as URL));
+        let url = new URL('/', nextUrl as unknown as URL);
+        console.log("URL===>>>   "+url);
+        return Response.redirect(url);
       }
 
       if (isOnRegister || isOnLogin) {
@@ -30,7 +32,8 @@ export const authConfig = {
       }
 
       if (isLoggedIn) {
-        return Response.redirect(new URL('/', nextUrl as unknown as URL));
+        // return Response.redirect(new URL('/', nextUrl as unknown as URL));
+        return Response.redirect(new URL("https://ai-chatbot-dusd.onrender.com"));
       }
 
       return true;
